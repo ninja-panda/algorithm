@@ -11,7 +11,7 @@ public class FindLoop {
 	 * @param head
 	 * @return
 	 */
-	public boolean hasLoop(Node head) {
+	public boolean byFloydCycleDetection(Node head) {
 		Node fastPtr = head;
 		Node slowPtr = head;
 		while (fastPtr != null && fastPtr.next != null) {

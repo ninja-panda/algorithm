@@ -1,7 +1,5 @@
 package com.algo.linkedlist;
 
-import java.util.Objects;
-
 /**
  * Created by ardas on 9/14/2018.
  */
@@ -20,13 +18,7 @@ public class Node {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Node node = (Node) o;
-		return data == node.data &&
-				Objects.equals(next, node.next);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(data, next);
+		return data == node.data && next == node.next;
 	}
 
 	public void print() {

@@ -6,7 +6,7 @@ package com.algo.linkedlist;
 public class TestLinkedList {
 
 	public static void main(String[] args) {
-		testNthLastNode();
+		//testNthLastNode();
 		testCircularLinkedList();
 	}
 
@@ -30,12 +30,12 @@ public class TestLinkedList {
 	}
 
 	public static void testCircularLinkedList() {
-		LinkedList linkedListWithLoop = new LinkedList(10, 3);
 		FindLoop findLoop = new FindLoop();
-		lineBreak();
-		System.out.println("LinkedList has Loop :" + findLoop.hasLoop(linkedListWithLoop.head));
+		LinkedList linkedListWithLoop = new LinkedList(10, 3);
 		LinkedList linkedListWithOutLoop = new LinkedList(10);
-		System.out.println("LinkedList has Loop :" + findLoop.hasLoop(linkedListWithOutLoop.head));
+		System.out.println("LinkedList has Loop by FloydCycleDetection: " + findLoop.byFloydCycleDetection(linkedListWithLoop.head));
+		System.out.println("LinkedList has Loop by FloydCycleDetection: " + findLoop.byFloydCycleDetection(linkedListWithOutLoop.head));
+		lineBreak();
 		System.out.print("Loop starts at:");
 		findLoop.loopStartsAt(linkedListWithLoop.head).print();
 	}
