@@ -6,8 +6,9 @@ package com.algo.linkedlist;
 public class TestLinkedList {
 
 	public static void main(String[] args) {
-		//testNthLastNode();
+		testNthLastNode();
 		testCircularLinkedList();
+		testReverse();
 	}
 
 	public static void testNthLastNode() {
@@ -40,8 +41,18 @@ public class TestLinkedList {
 		findLoop.loopStartsAt(linkedListWithLoop.head).print();
 	}
 
+	private static void testReverse() {
+		LinkedList linkedList = new LinkedList(10);
+		System.out.print("Original List :");
+		ListUtil.printList(linkedList.head);
+		lineBreak();
+		Node head = ListUtil.reverseList(linkedList.head);
+		System.out.print("Reversed List :");
+		ListUtil.printList(head);
+
+	}
+
 	public static void lineBreak() {
 		System.out.println();
 	}
-
 }

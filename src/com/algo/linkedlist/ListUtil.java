@@ -23,4 +23,22 @@ public class ListUtil {
 		}
 		return length;
 	}
+
+	/**
+	 * Reverse the LinkedList in iterative way
+	 *
+	 * @param head
+	 * @return
+	 */
+	public static Node reverseList(Node head) {
+		Node current = head;
+		Node prev = null, next = null;
+		while (current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		return prev;
+	}
 }
