@@ -6,9 +6,9 @@ package com.algo.linkedlist;
 public class TestLinkedList {
 
 	public static void main(String[] args) {
-		//testNthLastNode();
-		//testCircularLinkedList();
-		//testReverse();
+		testNthLastNode();
+		testCircularLinkedList();
+		testReverse();
 		testPalindrome();
 	}
 
@@ -58,22 +58,27 @@ public class TestLinkedList {
 		LinkedList linkedList = new LinkedList("MADAM");
 		System.out.println("Is MADAM is Palindrome usingStack: " + checkPalindrome.usingStack(linkedList.head));
 		System.out.println("Is MADAM is Palindrome usingHalfStack: " + checkPalindrome.usingHalfStack(linkedList.head));
+		System.out.println("Is MADAM is Palindrome isPalindrome: " + checkPalindrome.isPalindrome(linkedList.head));
 
 		linkedList = new LinkedList("ARPAN DAS");
 		System.out.println("Is ARPAN DAS is Palindrome usingStack: " + checkPalindrome.usingStack(linkedList.head));
 		System.out.println("Is ARPAN DAS is Palindrome usingHalfStack: " + checkPalindrome.usingHalfStack(linkedList.head));
+		System.out.println("Is ARPAN DAS is Palindrome isPalindrome: " + checkPalindrome.isPalindrome(linkedList.head));
 
 		linkedList = new LinkedList("12321");
 		System.out.println("Is 12321 is Palindrome usingStack: " + checkPalindrome.usingStack(linkedList.head));
 		System.out.println("Is 12321 is Palindrome usingHalfStack: " + checkPalindrome.usingHalfStack(linkedList.head));
+		System.out.println("Is 12321 is Palindrome isPalindrome: " + checkPalindrome.isPalindrome(linkedList.head));
 
 		linkedList = new LinkedList("S");
 		System.out.println("Is S is Palindrome usingStack: " + checkPalindrome.usingStack(linkedList.head));
 		System.out.println("Is S is Palindrome usingHalfStack: " + checkPalindrome.usingHalfStack(linkedList.head));
+		System.out.println("Is S is Palindrome isPalindrome: " + checkPalindrome.isPalindrome(linkedList.head));
 
 		linkedList = new LinkedList("SA");
 		System.out.println("Is SA is Palindrome usingStack: " + checkPalindrome.usingStack(linkedList.head));
 		System.out.println("Is SA is Palindrome usingHalfStack: " + checkPalindrome.usingHalfStack(linkedList.head));
+		System.out.println("Is SA is Palindrome isPalindrome: " + checkPalindrome.isPalindrome(linkedList.head));
 	}
 
 	public static void lineBreak() {

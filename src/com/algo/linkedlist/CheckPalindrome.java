@@ -63,7 +63,7 @@ public class CheckPalindrome {
          * skip the middle elements of the list
          */
         int length = ListUtil.length(head);
-        if(length %2 != 0){
+        if (length % 2 != 0) {
             slowPtr = slowPtr.next;
         }
 
@@ -83,7 +83,7 @@ public class CheckPalindrome {
         return isPalindrome;
     }
 
-    public static boolean isPalindrome(Node head){
+    public static boolean isPalindrome(Node head) {
         boolean isPalindrome = true;
         if (head == null) {
             return false;
@@ -97,10 +97,19 @@ public class CheckPalindrome {
         }
 
         Node temp = slowPtr;
+
+        // Reverse the linked list from Middle
         Node tempHead = ListUtil.reverseList(temp);
+        Node preserveMiddle = tempHead;
+        // Set fastPtr to head
         fastPtr = head;
-        while(tempHead != null){
-            if(fastPtr.data != tempHead.data){
+
+        /**
+         * Compare nodes from head and reverse nodes from
+         * middle to check if the linked list is palindrome
+         */
+        while (tempHead != null) {
+            if (fastPtr.data != tempHead.data) {
                 isPalindrome = false;
                 break;
             }
@@ -108,11 +117,5 @@ public class CheckPalindrome {
             tempHead = tempHead.next;
         }
         return isPalindrome;
-    }
-
-    public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList("MADAM");
-        boolean test = isPalindrome(linkedList.head);
-        System.out.println(test);
     }
 }
