@@ -15,6 +15,16 @@ public class ListUtil {
 		}
 	}
 
+	public static void printCharList(Node head) {
+		while (head != null) {
+			head.printCharValue();
+			head = head.next;
+			if (head != null) {
+				System.out.print(" --> ");
+			}
+		}
+	}
+
 	public static int length(Node head) {
 		int length = 0;
 		while (head != null) {

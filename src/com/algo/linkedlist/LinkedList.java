@@ -43,4 +43,20 @@ public class LinkedList {
 		}
 		tempNode.next = loop;
 	}
+
+	/**
+	 * Create a LinkedList from a String
+	 *
+	 * @param str str is the Content of the linked list
+	 */
+	public LinkedList(String str) {
+		char[] charArray = str.toCharArray();
+		head = new Node(charArray[0]);
+		Node tempNode = head;
+		for (int i = 1; i < charArray.length; i++) {
+			Node node = new Node(charArray[i]);
+			tempNode.next = node;
+			tempNode = tempNode.next;
+		}
+	}
 }

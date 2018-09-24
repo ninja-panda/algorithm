@@ -24,4 +24,8 @@ public class Node {
 	public void print() {
 		System.out.print(this.data);
 	}
+
+	public void printCharValue() {
+		System.out.print((char)this.data);
+	}
 }
