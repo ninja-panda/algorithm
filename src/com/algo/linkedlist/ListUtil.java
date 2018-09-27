@@ -53,9 +53,12 @@ public class ListUtil {
     }
 
     /**
-     * Merge two linked list in given position.Head1 is pointing
-     * to a linked list with greater length.Head2 linked list will
-     * point to head1 linked list in given position.
+     * Merge two linked list in a given position. head1 is pointing
+     * to the longer linked list where head2 is pointing to the
+     * shorter linked list. Now this method will merge the smaller
+     * linked list to the longer one in the given position, after
+     * the intersection both forward towards end together.
+     *
      */
     public static void mergeLinkedList(Node head1, Node head2, int position) {
         Node temp = head1;

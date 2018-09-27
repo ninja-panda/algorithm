@@ -110,10 +110,22 @@ public class TestLinkedList {
     private static void testLinkedListIntersection() {
         LinkedList linkedList = new LinkedList(10);
         LinkedList linkedList1 = new LinkedList(5);
-        ListUtil.mergeLinkedList(linkedList.head, linkedList1.head, 4);
+        System.out.println("List 1 before merging: ");
         ListUtil.printList(linkedList.head);
         lineBreak();
+        System.out.println("List 2 before merging: ");
         ListUtil.printList(linkedList1.head);
+        lineBreak();
+        ListUtil.mergeLinkedList(linkedList.head, linkedList1.head, 4);
+        lineBreak();
+        System.out.println("List 2 after merging: ");
+        ListUtil.printList(linkedList1.head);
+        lineBreak();
+        CheckIntersection checkIntersection = new CheckIntersection();
+        System.out.println("If both the list intersect bySeenMethod : "
+                + checkIntersection.bySeenMethod(linkedList.head, linkedList1.head));
+        System.out.println("If both the list intersect check : "
+                + checkIntersection.check(linkedList.head, linkedList1.head));
     }
 
     public static void lineBreak() {
